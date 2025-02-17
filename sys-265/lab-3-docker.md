@@ -1,12 +1,10 @@
 # Lab #3: Docker
 
-
-
 ## Intro and Overview
 
 This lab introduced a new box into my current infrastructure so the first step as always was to wire and configure the box. Below you can find an outline of the changes and proof of configurations.
 
-<figure><img src="../../.gitbook/assets/docker01-starting.png" alt=""><figcaption><p>The basic configurations of the docker box, taken from putty in the management server. The<br>docker box has a local admin, can be elevated to root, and can ping the outside world.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/docker01-starting.png" alt=""><figcaption><p>The basic configurations of the docker box, taken from putty in the management server. The<br>docker box has a local admin, can be elevated to root, and can ping the outside world.</p></figcaption></figure>
 
 This machine's purpose is to host docker for the multitude of tests and applications that will be run from it for the further steps of the lab. The machine has a static IP address of 10.0.5.12 and is direct into the main firewall of the infrastructure.&#x20;
 
@@ -78,7 +76,7 @@ docker-compose --version
 
 This is the basics of getting the docker instance up and running on the ubuntu machine, this basically gets the packages listed from the inputted docker link to the software and also downloads the docker gpg keys needed for the install. Once that is done, you should get a screen similar to the one below showing the docker service is running as intended.
 
-<figure><img src="../../.gitbook/assets/docker_works.png" alt=""><figcaption><p>Docker status is showing active and running after installing using the CLI</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/docker_works.png" alt=""><figcaption><p>Docker status is showing active and running after installing using the CLI</p></figcaption></figure>
 
 ## Functions of Docker
 
@@ -94,7 +92,7 @@ docker run hello-world
 
 
 
-<figure><img src="../../.gitbook/assets/docker_hello.png" alt=""><figcaption><p>This is the output from running docker's image for "hello-world"</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/docker_hello.png" alt=""><figcaption><p>This is the output from running docker's image for "hello-world"</p></figcaption></figure>
 
 This can be used to test and verify that your docker installation can function and pull images from the web and from the docker databases.
 
@@ -109,7 +107,7 @@ docker ps
 
 
 
-<figure><img src="../../.gitbook/assets/docker_networking.png" alt=""><figcaption><p>The above screenshot is me accessing my dockerized web app via hostname and ephemeral port</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/docker_networking.png" alt=""><figcaption><p>The above screenshot is me accessing my dockerized web app via hostname and ephemeral port</p></figcaption></figure>
 
 ### Using Docker-Compose
 
