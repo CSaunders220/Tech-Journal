@@ -6,3 +6,4 @@
 
 * [Lab #3: Docker](sys-265/lab-3-docker.md)
 * [Project: Docker](sys-265/project-docker.md)
+* [Git and Linux SSH Scripts](sys-265/git-and-linux-ssh-scripts.md)
