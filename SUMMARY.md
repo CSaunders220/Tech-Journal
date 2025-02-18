@@ -10,4 +10,4 @@
 * [Lab #2: DHCP](sys-265/lab-2-dhcp.md)
 * [Lab #3: Docker](sys-265/lab-3-docker.md)
 * [Project: Docker](sys-265/project-docker.md)
-* [Git and Linux SSH Scripts](sys-265/git-and-linux-ssh-scripts.md)
+* [Lab #4: Git and Linux SSH Scripts](sys-265/git-and-linux-ssh-scripts.md)
