@@ -12,3 +12,7 @@
 * [Project: Docker](sys-265/project-docker.md)
 * [Lab #4: Git and Linux SSH Scripts](sys-265/git-and-linux-ssh-scripts.md)
 * [Lab #5: Automation with Ansible](sys-265/lab-5-automation-with-ansible.md)
+
+***
+
+* [Lab #6: AD - GPO](lab-6-ad-gpo.md)
