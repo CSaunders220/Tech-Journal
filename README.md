@@ -16,4 +16,6 @@
   * Lab #4: [Git and Linux SSH Script](sys-265/git-and-linux-ssh-scripts.md)
 * Week 6
   * Lab #5: [Automation with Ansible](sys-265/lab-5-automation-with-ansible.md)
+* Week 7
+  * Lab #6: [AD - GPO](lab-6-ad-gpo.md)
 
