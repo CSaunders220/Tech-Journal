@@ -4,10 +4,6 @@
 
 Lab00 got the setup work out of the way ahead of the rest of the semester (at least the basics). This covered setting up an AD on server core, setting up a management box with windows server GUI, the firewall, and the workstation box.
 
-## Environment Setup
-
-
-
 ## Interesting Terms and Topics
 
 1. Cross-platform Authentication
@@ -20,4 +16,4 @@ This is something that I should know more about, at least in my opinion, but I r
 
 3. Alternative Virtualization
 
-While Vcenter is great, from a UI/UX P.O.V. on a very surface level, I am very excited to be working more in depth with alternative virtualization platforms and solutions. I do have some experience building networks and systems in Proxmox and I am looking forward to using it for some of this class, but I am also excited that there is a potential to explore other alternatives and different platforms. The more that I am familiar with, the more versatile my skill set is and therefore I can apply my knowledge to a wider range of network environments and I am really excited for that.
+While Vcenter is great, from a UI/UX P.O.V. on a very surface level, I am very excited to be working more in depth with alternative virtualization platforms and solutions. I do have some experience building networks and systems in Proxmox and I am looking forward to using it for some of this class, but I am also excited that there is a potential to explore other alternatives and different platforms like Docker or Kubernetes. The more that I am familiar with, the more versatile my skill set is and therefore I can apply my knowledge to a wider range of network environments and I am really excited for that.

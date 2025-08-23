@@ -75,6 +75,36 @@ Msiexec {path to downloaded msi}
 
 Something of note for the windows machine agent, when running the above command there will be a GUI menu in which you must select "clean install" for the installation to work properly, especially if you have configured the agent on the machine already.
 
+## Adding Hosts in CheckMK
+
+Start by getting to the hosts menu in the newly installed web portal running on the port that was configured in the previous part. The menu should look similar to the screenshot below.
+
+<figure><img src="../.gitbook/assets/unnamed.png" alt=""><figcaption></figcaption></figure>
+
+Once in this menu, select that you want to add a host as seen below:
+
+<figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXflTqqTjMNewXhDfTnHiKNNe07rSRc9w6Z6t0ab90pkC1dXoAVHzajjPScuferMImedqsKAcVc8LAgTI-HeJBuWmfieKjQ8rkulvLi1c34xgYnz4nL58__8tG47S1xbjifw_VmhccmfVtEgf17lmg?key=c5PwXchCaDaROJs7kphznpXP" alt=""><figcaption></figcaption></figure>
+
+Enter the hostname of the desired machine that you wish to join to the monitoring panel as well as any other prompted information through the joining steps. Once filled out and saved, it is important to run the service discovery to validate that the machine running CheckMK can see the hosts.
+
+<p align="center"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdLmjiuLB0v9pFzaotjluFhnY1Wpt7cd8dlg4XNe8exznruC42B101R6NNhQwH-24nbMlWuwQwAjiiMVLunAzNdocNcHpPMU6Tr9kecn6-7CyI-cJpqizWWiNL8-rcr0UK7t8OBZyPV-PaA1uHx8aY?key=c5PwXchCaDaROJs7kphznpXP" alt=""></p>
+
+<figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXe9Mp82Ebxojfri5oXmxz57EEb5nGTNF-0idJL2V3zcnV5viOcECjOlnVnsg1Bedu4japRwUoPTV5X3tqopuIgD_U1HSD4eN7DaukOUkWRrfiR4jAZySGSpWo5WqXs8ZV9wM0j73e99WP6FLuSpIww?key=c5PwXchCaDaROJs7kphznpXP" alt=""><figcaption></figcaption></figure>
+
+Finalize any changes by selecting the yellow stop sign and refreshing the local server by clicking the red button as seen below. This, in essence, commits the changes to the CheckMK server.
+
+<figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcpStTGcgDVQHr65UU1cqF6qbm7MMNtXKydy9RLBpzxESjE-6SP0DJGoozPVXCuDNeYgPYLI2BCGefQLRtGVUSbYSvSNjw1CvtzwZ5ytjZ5kko8JZLXgXrScukiCX0eZyBLkw4hpKIZCbpvopYCWFk?key=c5PwXchCaDaROJs7kphznpXP" alt=""><figcaption></figcaption></figure>
+
+### Setting Flags / Checks
+
+To set a flag or a check using the web service, go to the main settings menu in the left side bar, select services, and then service monitoring rules.
+
+<figure><img src="../.gitbook/assets/unnamed (1).png" alt=""><figcaption></figcaption></figure>
+
+Proceed to the services menu and select the desired service to monitor. For the purposes of this activity, we selected the file system usage. Once in the rule, we can set the desired levels that we want to trigger a warning and set a different level for a critical flag.
+
+<figure><img src="../.gitbook/assets/unnamed (2).png" alt=""><figcaption></figcaption></figure>
+
 ## Common Troubleshooting
 
 Make sure to change and enable the firewall rules when installing any agents onto a linux host, otherwise the host will not be able to communicate with the server. Windows will automatically complete this task through the MSI installer.

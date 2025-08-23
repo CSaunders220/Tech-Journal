@@ -4,7 +4,6 @@
 
 ## SYS 265
 
-* [SYS-265 Home](sys-265/sys-265-home.md)
 * [Lab #0: Environment Setup](sys-265/lab-0-environment-setup.md)
 * [Lab #1: Network Management](sys-265/lab-1-network-management.md)
 * [Project: Network Monitoring](sys-265/project-network-monitoring.md)
