@@ -6,6 +6,13 @@ SNMP or the Simple Network Management Protocol is an application layer protocol 
 
 The protocol most often uses agents or services that have agents to create automations and alerts based on what results from the SNMP packets returning.&#x20;
 
+Uses two ports for packages:
+
+* Port 161/UDP (Regular messaging)
+* Port 162/UDP (Traps)
+
+RFC 1098: [https://www.rfc-editor.org/rfc/rfc1098.txt](https://www.rfc-editor.org/rfc/rfc1098.txt)
+
 ## Host Configurations
 
 To install SNMP onto a windows machine, particularly a Windows Server machine, you had to add the role first, then once the role is added you can open the services manager (services.msc) and navigate to SNMP, make sure it is automatically starting on startup, and then configure what machines that you want to be able to recieve SNMP packets from. Leaving this open would allow for network storms and SNMP packets from malicious machines so be sure to change this to only allow packets from machines you want to be recieving them from.&#x20;
