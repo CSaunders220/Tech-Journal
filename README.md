@@ -17,5 +17,5 @@
 * Week 6
   * Lab #5: [Automation with Ansible](sys-265/lab-5-automation-with-ansible.md)
 * Week 7
-  * Lab #6: [AD - GPO](lab-6-ad-gpo.md)
+  * Lab #6: [AD - GPO](sys-265/lab-6-ad-gpo.md)
 

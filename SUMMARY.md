@@ -4,6 +4,7 @@
 
 ## SYS 265
 
+* [SYS-265 Home](sys-265/sys-265-home.md)
 * [Lab #0: Environment Setup](sys-265/lab-0-environment-setup.md)
 * [Lab #1: Network Management](sys-265/lab-1-network-management.md)
 * [Project: Network Monitoring](sys-265/project-network-monitoring.md)
@@ -12,7 +13,15 @@
 * [Project: Docker](sys-265/project-docker.md)
 * [Lab #4: Git and Linux SSH Scripts](sys-265/git-and-linux-ssh-scripts.md)
 * [Lab #5: Automation with Ansible](sys-265/lab-5-automation-with-ansible.md)
+* [Lab #6: AD - GPO](sys-265/lab-6-ad-gpo.md)
 
-***
+## Sys 255
 
-* [Lab #6: AD - GPO](lab-6-ad-gpo.md)
+* [Lab #1: Environment Setup](sys-255/lab-1-environment-setup.md)
+* [Lab #2: DNS and ADDS](sys-255/lab-2-dns-and-adds.md)
+* [Lab #3: Linux Basics](sys-255/lab-3-linux-basics.md)
+* [Lab #4: DHCP Basics](sys-255/lab-4-dhcp-basics.md)
+* [Lab #5: Group Policy and Further ADDS](sys-255/lab-5-group-policy-and-further-adds.md)
+* [Lab #6: File Servers](sys-255/lab-6-file-servers.md)
+* [Lab #7: Apache and Web Servers](sys-255/lab-7-apache-and-web-servers.md)
+* [Assignment: Securing SSH](sys-255/assignment-securing-ssh.md)
