@@ -13,7 +13,7 @@
   * Lab #3: [Docker Lab](sys-265/lab-3-docker.md)
   * Project: [Docker](sys-265/project-docker.md)
 * Week 5
-  * Lab #4: [Git and Linux SSH Script](sys-265/git-and-linux-ssh-scripts.md)
+  * Lab #4: [Git and Linux SSH Script](sys-265/lab-4-git-and-linux-scripts.md)
 * Week 6
   * Lab #5: [Automation with Ansible](sys-265/lab-5-automation-with-ansible.md)
 * Week 7

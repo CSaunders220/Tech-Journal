@@ -10,7 +10,7 @@
 * [Lab #2: DHCP](sys-265/lab-2-dhcp.md)
 * [Lab #3: Docker](sys-265/lab-3-docker.md)
 * [Project: Docker](sys-265/project-docker.md)
-* [Lab #4: Git and Linux SSH Scripts](sys-265/git-and-linux-ssh-scripts.md)
+* [Lab #4: Git and Linux Scripts](sys-265/lab-4-git-and-linux-scripts.md)
 * [Lab #5: Automation with Ansible](sys-265/lab-5-automation-with-ansible.md)
 * [Lab #6: AD - GPO](sys-265/lab-6-ad-gpo.md)
 
