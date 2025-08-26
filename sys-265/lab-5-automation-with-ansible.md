@@ -35,11 +35,9 @@ wks01-chris
 
 The basic syntax of an ansible command that we used throughout the lab and that I adapted for each use case (until ansible galaxy) was similar to the one below.
 
-{% code overflow="wrap" %}
 ```bash
 ansible <group_name> -a <linux_command> -i <inventory_file> -m <module> -u <user_for_windows> --ask-pass
 ```
-{% endcode %}
 
 This basic framework was the backbone of all of the ansible commands that I had run throughout the basic parts of the lab and the activities. This one specifically was used for windows because on a Linux environment the user would be simply the deployer account so that would not be necessary.&#x20;
 
@@ -59,11 +57,9 @@ This command above used an inventory list that consisted of entirely Linux machi
 
 ***
 
-{% code overflow="wrap" %}
 ```bash
 ansible windows -i inventory.txt -m win_ping -u chris.saunders-adm@chris.local --ask-pass
 ```
-{% endcode %}
 
 This command basically did the same as the above command but for windows machines. This command had a user input for an authorized windows remote user and then had a secure string prompt after running the command for the user's password. Similarly, this outputted the results to the terminal but formatted differently since this time it was a module being used for windows machines. The output for running this on my management and workstation machines can be seen below.
 
