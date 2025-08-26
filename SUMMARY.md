@@ -14,7 +14,7 @@
 * [Lab #5: Automation with Ansible](sys-265/lab-5-automation-with-ansible.md)
 * [Lab #6: AD - GPO](sys-265/lab-6-ad-gpo.md)
 
-## Sys 255
+## SYS 255
 
 * [Lab #1: Environment Setup](sys-255/lab-1-environment-setup.md)
 * [Lab #2: DNS and ADDS](sys-255/lab-2-dns-and-adds.md)
