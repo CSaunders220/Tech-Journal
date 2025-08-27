@@ -2,6 +2,14 @@
 
 * [Tech Journal Home Page](README.md)
 
+## SYS 320
+
+* [Page 2](sys-320/page-2.md)
+
+## SYS 350
+
+* [Page 1](sys-350/page-1.md)
+
 ## SYS 265
 
 * [Lab #0: Environment Setup](sys-265/lab-0-environment-setup.md)
