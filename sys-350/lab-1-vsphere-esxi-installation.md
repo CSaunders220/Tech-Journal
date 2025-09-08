@@ -202,31 +202,5 @@ Once all configurations had been made, the installation was ready to start as sh
 
 ### PFSense Configurations
 
-
-
-<figure><img src="../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
-
-
-
-<figure><img src="../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
-
-
-
-<figure><img src="../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
-
-
+### Xubnutu Configurations
 
