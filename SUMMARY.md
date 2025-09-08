@@ -8,7 +8,7 @@
 
 ## SYS 350
 
-* [Page 1](sys-350/page-1.md)
+* [Lab #1: vSphere Hypervisor Installation](sys-350/lab-1-vsphere-hypervisor-installation.md)
 
 ## SYS 265
 
