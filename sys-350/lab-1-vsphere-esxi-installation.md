@@ -148,17 +148,19 @@ Next, below is a screenshot of the virtual port groups that I have on my ESXI th
 
 ## Installing VMs
 
+The next and final part of the lab was to install and begion the process of populating my environment with VMs. For this lab, it was simply a PFSense VM and a management box that is running XUbuntu.&#x20;
+
 ### PFSense VM Install
 
-
+To start the installation of PFsense ontoa  VM i needed to create a VM first. To do this, I started at the Virtual Machines menu and selected Create/register a VM.&#x20;
 
 <figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
 
-
+From here, I followed the wizard to install the first VM onto the system as seen below by selecting the option to create a new virtual machine.
 
 <figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
 
-
+I then gave the new VM a name, chose the compatibility level of the VM
 
 <figure><img src="../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 
