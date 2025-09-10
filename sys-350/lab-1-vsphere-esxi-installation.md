@@ -160,15 +160,15 @@ From here, I followed the wizard to install the first VM onto the system as seen
 
 <figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
 
-I then gave the new VM a name, chose the compatibility level of the VM
+I then gave the new VM a name, chose the compatibility level of the VM, selected the OS family, and the OS itself. In this case for the PFSense VM I selected the other category and then FreeBSD.&#x20;
 
 <figure><img src="../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 
-
+Next I selected which datastore to keep the VM files on. In this case I chose the second datastore.
 
 <figure><img src="../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
 
-
+I then allocated resources to the machine. I gave it 1 core, 2GB RAM, and an 8GB hard disk that was thin provisioned. Since this was my firewall machine
 
 <figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
 
@@ -325,6 +325,12 @@ I then gave the new VM a name, chose the compatibility level of the VM
 
 
 <figure><img src="../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
+
+## Current Network Diagram
+
+<figure><img src="../.gitbook/assets/SYS-350-diagram.jpg" alt=""><figcaption></figcaption></figure>
+
+
 
 ## Reflection
 
