@@ -2,6 +2,8 @@
 
 ## Overview
 
+This lab covers a lot of the housekeeping for our future vCenter environments including setting up a domain controller, setting up a VCSA machine, and setting up SSO between the DC and our vCenter machines for later use.
+
 ## Creating and Configuring a Domain Controller
 
 ### Installing a Windows Server VM
