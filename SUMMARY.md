@@ -10,6 +10,7 @@
 
 * [Lab #1: VMWare ESXi Installation](sys-350/lab-1-vmware-esxi-installation.md)
 * [Lab #2: AD, vCenter, and SSO](sys-350/lab-2-ad-vcenter-and-sso.md)
+* [Lab#3: Advanced Networking and Services](sys-350/lab-3-advanced-networking-and-services.md)
 
 ## SYS 265
 
