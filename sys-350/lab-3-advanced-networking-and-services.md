@@ -32,5 +32,9 @@ Lastly, to make sure the new networking for the management network was done, I w
 
 ### DMZ Network
 
+The only machine that will be inside of the DMZ at the time of this lab will be the web server. This VM should not be able to access the LAN or MGMT networks but should be able to be reached by both of these networks. Additionally, the DMZ should have availability to provide HTTP and HTTPS services outbound and inbound since it will be hosting a web server.&#x20;
+
+To start, I created a new rocky VM on the ESXi called web01-chris and networked it to the DMZ network. For now, I allowed internet traffic through the PFsense firewall for configuration purposes. Before configuring the web services, I had to get the DMZ network configured for the new rocky VM so I applied the internet settings as seen below.
+
 
 
