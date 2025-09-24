@@ -38,7 +38,35 @@ To start, I created a new rocky VM on the ESXi called web01-chris and networked 
 
 <figure><img src="../.gitbook/assets/image (90).png" alt=""><figcaption></figcaption></figure>
 
-Since this machine will not be able to connect to the LAN or the MGMT networks, this machine was set to use the google DNS servers (quad 8).&#x20;
+Since this machine will not be able to connect to the LAN or the MGMT networks, this machine was set to use the google DNS servers (quad 8). With that done, the machine was wired properly and configured properly but the firewall rules to allow connections had to be changed in the PFsense web configurator and for that I used my management box to make these changes.
+
+Unlike the LAN and MGMT networks, the DMZ has a few more firewall configurations that change its permissions and capabilities when traversing the network. Since it is a DMZ, I wanted to make sure that the web server could not reach the LAN or the MGMT networks.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+In order, top to bottom, we have several rules. There are:
+
+* Disallowing the DMZ network from accessing the LAN
+* Disallowing the DMZ from accessing the MGMT network
+* Allowing all HTTPS connections over port 443 onto the DMZ network
+* Allowing and HTTP connections over port 80 onto the DMZ network
+* Allowing the MGMT network to access the DMZ network
+* Allowing the LAN network to access the DMX network
+
+When all enabled, it allows for just web requests to access the DMZ, both the MGMT and LAN networks to have access to monitor and manage the DMZ machines, and it prevents the DMZ from being able to traverse laterally across the broader network.&#x20;
+
+It is important to note that I learned that PFsense managed the firewall rules in DESCENDING order, so any rules at the top of the list will be considered before any of the following rules which can lead to contradictions and issues if not done right.
+
+When configured right, I am able to view the web page being hosted on the DMZ network on my management box as seen below.
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+## Video Proof Submission
+
+Below is a short vide demonstrating the networking capabilities of the new environemt and prooving all of the above claims and configurations.&#x20;
 
 {% embed url="https://drive.google.com/file/d/1l7u1dF1eot252jKEwIho0e-ECV7SdD4i/view?usp=sharing" %}
 
+## Reflection
+
+This lab was very new to me as a whole since I am a third year at the time of taking this class compared to most students in this section who are fourth years. I have never really touched the concept of a DMZ. The concept was intuitive though and it didn't take me long to figure it out but for some other students who have taken more advanced SEC courses it probably was a little easier. Overall, when all is said and done, once I understood what a DMZ was and its purpose, it was simple to just configure the new networking and firewall rules.&#x20;
