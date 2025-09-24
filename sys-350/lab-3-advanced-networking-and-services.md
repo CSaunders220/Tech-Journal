@@ -36,5 +36,9 @@ The only machine that will be inside of the DMZ at the time of this lab will be 
 
 To start, I created a new rocky VM on the ESXi called web01-chris and networked it to the DMZ network. For now, I allowed internet traffic through the PFsense firewall for configuration purposes. Before configuring the web services, I had to get the DMZ network configured for the new rocky VM so I applied the internet settings as seen below.
 
+<figure><img src="../.gitbook/assets/image (90).png" alt=""><figcaption></figcaption></figure>
 
+Since this machine will not be able to connect to the LAN or the MGMT networks, this machine was set to use the google DNS servers (quad 8).&#x20;
+
+{% embed url="https://drive.google.com/file/d/1l7u1dF1eot252jKEwIho0e-ECV7SdD4i/view?usp=sharing" %}
 
