@@ -30,7 +30,7 @@ In this menu, since the firewall is the first of all of the dependents in access
 
 For all VMs below the firewall, I delayed them in order of importance by an interval of 5 seconds. I start with my domain controller for DHCP and DNS services, and then I move onto the rest of the bulk of the VMs to start.
 
-## Creating the Nested ESXi Hosts
+## Adding Nested ESXi Hosts
 
 &#x20;To start, I downloaded the OVA file from the cybershare and added it to my satastore2 ISOs folder for use in the deployments of the new ESXi hosts as seen below.
 
