@@ -14,21 +14,21 @@ This lab will cover a broad range of topics including but not limited to the fol
 
 In this case, I was installing the bootable files via USB drive so we started by flashing the ISO to a USB via Rufus. Once that was completed and the networking on the physical server was completed, I plugged in the USB into the server blade and restarted the server leading to the automatic start of the install. Once completed, the boot installation started as shown by the screenshot below:
 
-<figure><img src="../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once the core services and tools were installed, it came time to select a disk for the install of the boot partition. Below I have a screenshot showing the options for the selection of which disk to install onto. In this case, I selected the 500 GB internal drive and left the TB drive for the datastore that will be used later.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 After selecting which drive to partition and format for install, I set a root password for the root account of the new ESXi.&#x20;
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once all configurations had been made, the installation was ready to start as shown below. After a chunk of time, the server was ready to reboot after removing the USB from the server.
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Finally, once all of the steps for the initial install for the ESXI onto the server blade had been completed it prompted for a confirmation of actions and finally started a reboot of the system to proceed with the installation as seen above.&#x20;
 
@@ -36,23 +36,23 @@ Finally, once all of the steps for the initial install for the ESXI onto the ser
 
 Once the install of the ESXi image had completed I first removed the USB installation media from the physical server blade. Then, I began the post install configrations starting with the networking.&#x20;
 
-<figure><img src="../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 First, I selected the network adapter that I wanted to use as the default outbound network connection for the server itself, this will later functionally become the "VM Network" and is the direct link to the Freeman lab and cyber.local network.&#x20;
 
-<figure><img src="../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once that was selected, I chose to edit the IP settings for the machine and filled in the settings as seen above. The IP of the machine is the assigned HOST network assignment, not the IPMI interface network assignment, and the default gateway was simply the Freeman lab default gateway IP.&#x20;
 
-<figure><img src="../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Next, I set the defauly DNS configurations to point towards the cyber.local DNS servers, one as a primary and the other as the secondary. I also changed the hostname of the machine at this stage to the assigned superX number, in this case my server is super11.
 
-<figure><img src="../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Lastly, I changed the default domain to be cyber.local to assist with the hostname resolution later down the line and have the default be more easily accessible.&#x20;
 
-<figure><img src="../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once completed, I accepted the network configurations, allowed it to finalize, and then accessed my ESXi host from my browser via IP as seen in the screenshot above.&#x20;
 
@@ -60,49 +60,49 @@ Once completed, I accepted the network configurations, allowed it to finalize, a
 
 The following screenshot is my submission for Deliverable 1, it is the home screen after login in with the set root password in order to see my VM dashboard before configuring anything on the ESXi.&#x20;
 
-<figure><img src="../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Adding/Creating Datastores
 
 To configure and add the datastores, you first have to login to the ESXi portal via IP in the browser. Once that is done, on the homepage, select the storage menu.
 
-<figure><img src="../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Inside of the storage menu, at the center of the screen there is a listing of all of the datastores that are attached to the machine. In my case, there was one unconfigured SSD in my machine and the one started datastore that I had installed the ESXI onto. I started by renaming the datastore by right clicking the first datastore and the selecting rename. I then set it to the apropriate name.
 
-<figure><img src="../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Next, I wanted to add the second SSD as a secondary datastore on the ESXi host. To do this, I hit the new datastore button on that datastore default screen as seen below.&#x20;
 
-<figure><img src="../.gitbook/assets/image (13) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Next, I followed the wizard to add the new datastore to my ESXI host. I first selected to create a new VMFS datastore.
 
-<figure><img src="../.gitbook/assets/image (14) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (14) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 I then selected the second Sanmsubng SSD (1TB) that I had inside of the server and added that as a datastore target. I also gave it the name datastore2-super11 at this stage to match the naming scheme for the datastores.&#x20;
 
-<figure><img src="../.gitbook/assets/image (15) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (15) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 I then waited for it to scan the disk to see how much available storage there was and in this case it was empty. I configured it to use the entire disk with this new partition and chose the VMFS 6 scheme since it was the most recent and up to date. This is the same partitioning scheme that the other datastore followed as well by default.&#x20;
 
-<figure><img src="../.gitbook/assets/image (16) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (16) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ofr the last step of the wizard, I confrmed all of my selections before it formatted and partitioned the new drive as a secondary datastore.&#x20;
 
-<figure><img src="../.gitbook/assets/image (17) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (17) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once complete, the new datastore appeared in the menu as a storage location. I then used the create directory button to make a new folder called ISOs, uploaded the PFsense and Xubuntu ISOs to the new datastore from my local machine by selection upload, and then allowed them to complete uploading to the ESXi.&#x20;
 
-<figure><img src="../.gitbook/assets/image (20) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (20) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 2
 
-<figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (21) (1).png" alt=""><figcaption></figcaption></figure>
 
 Above and below are my submissions for Deliverable 2. In the screenshot above I have captured a screenshot of the two datastores as how they appear in my ESXI host from the web portal. I have both Datastore1-super11 and Datastore2-super11 which are my two internal SSDs attached to my server.
 
-<figure><img src="../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (22) (1).png" alt=""><figcaption></figcaption></figure>
 
 Above is the screenshot of my ISOs folder on datastore 2. This is a new directory that I created, uploaded the two ISOs for PFsense and Xubuntu, and stored.&#x20;
 
