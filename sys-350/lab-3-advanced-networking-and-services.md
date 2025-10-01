@@ -42,7 +42,7 @@ Since this machine will not be able to connect to the LAN or the MGMT networks, 
 
 Unlike the LAN and MGMT networks, the DMZ has a few more firewall configurations that change its permissions and capabilities when traversing the network. Since it is a DMZ, I wanted to make sure that the web server could not reach the LAN or the MGMT networks.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 In order, top to bottom, we have several rules. There are:
 
@@ -59,7 +59,7 @@ It is important to note that I learned that PFsense managed the firewall rules i
 
 When configured right, I am able to view the web page being hosted on the DMZ network on my management box as seen below.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Video Proof Submission
 
