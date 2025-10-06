@@ -133,3 +133,5 @@ print(aboutInfo)
 To summarize this code line by line, it imports the json library so I will be able to load the variables established in the JSON file that I had previously created, defines the vcenter\_conf variable to hold the parsed JSON file contents, imports the getpass library for secure password retrieval from the console by user input, takes in the password for the user, imports the SmartConnect module from the pvVim.connect library, imports the ssl module, established the ssl context and saves it to the variable "s", establishes the smart connection to the vCenter host and defines it as the si variable by taking in the variables from the JSON file for the username and host, and lastly retrieves the about info from the smart connection and prints it to the console.&#x20;
 
 When all put together and run, it will prompt the user for the password for the connection and then output the aboutInfo page and all of its contents to the terminal as seen below.&#x20;
+
+<figure><img src="../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
