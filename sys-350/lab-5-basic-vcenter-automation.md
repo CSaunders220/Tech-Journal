@@ -93,3 +93,43 @@ Once installed, it was time to begin creating the python files and configuration
 ### JSON Configuration File
 
 One of the main tasks of this lab is to use a JSON file to pass configurations to the python script for a more dynamic scripting environment.&#x20;
+
+For the environmental variables, the following JSON file was created for my environment:
+
+```
+{ "vcenter": [
+    {
+        "vcenterhost" : "vcenter-chris.chris.local",
+        "vcenteradmin" : "chris.saunders-adm@chris.local"
+    }]
+}
+```
+
+This file defined the target host for the future connections as well as defines the desired user for connecting to the vCenter instance for data collection.&#x20;
+
+## PyVmomi Connection Initialization
+
+To initialize the connection to the vCenter server, a connection through the pyVmomi python library tools had to be made. This code was adapted from the example code provided from the lab to get me started.
+
+```
+#vconnect starter file
+#Created by referencing lab material created by rtgillen
+
+import json
+with open('vcenter-conf.json', 'r') as f:
+    vcenter_conf = json.load(f)
+
+import getpass
+passw = getpass.getpass()
+from pyVim.connect import SmartConnect
+import ssl
+s=ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
+s.verify_mode=ssl.CERT_NONE
+si=SmartConnect(host=vcenter_conf['vcenter'][0]['vcenterhost'], user=vcenter_conf['vcenter'][0]['vcenteradmin'], pwd=passw, sslContext=s)
+aboutInfo=si.content.about
+print(aboutInfo)
+```
+
+To summarize this code line by line, it imports the json library so I will be able to load the variables established in the JSON file that I had previously created, defines the vcenter\_conf variable to hold the parsed JSON file contents, imports the getpass library for secure password retrieval from the console by user input, takes in the password for the user, imports the SmartConnect module from the pvVim.connect library, imports the ssl module, established the ssl context and saves it to the variable "s", establishes the smart connection to the vCenter host and defines it as the si variable by taking in the variables from the JSON file for the username and host, and lastly retrieves the about info from the smart connection and prints it to the console.&#x20;
+
+When all put together and run, it will prompt the user for the password for the connection and then output the aboutInfo page and all of its contents to the terminal as seen below.&#x20;
