@@ -68,11 +68,11 @@ Now that the Datacenter is created, the ESXi host that is running my other exist
 
 I then added the hostname of the target server that I wanted to add to the vCenter as seen below.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 I then provided login information for my ESXi host.
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Lastly, I reviewed the information that vCenter collected from the host and then added the host to vCenter.
 
@@ -128,7 +128,7 @@ Lastly for this section, I edited the vSwitch settings for my networking so that
 
 In order to create the templates and have them deploy properly, I needed to install DHCP onto my environment in a manner of my choice and I chose to go through my AD. I went through the add roles and features menu and selected the DHCP server install as seen below.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 I also specified the user that was permitting the install of the DHCP services onto the AD.
 
@@ -142,9 +142,9 @@ I then quickly configured a scope that does not conflict with any IPs currently 
 
 To create a templateable VM, I started with using an ISO from my datastore and I chose to go with Xubuntu. I set the VM configurations as such:
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 I set the network to be the SYS-350 LAN and also connected the datastore 2 ISO folder file for the Xubuntu ISO that I previously had in that location.&#x20;
 

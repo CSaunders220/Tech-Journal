@@ -12,6 +12,7 @@
 * [Lab #2: AD, vCenter, and SSO](sys-350/lab-2-ad-vcenter-and-sso.md)
 * [Lab#3: Advanced Networking and Services](sys-350/lab-3-advanced-networking-and-services.md)
 * [Lab #4: Nested Virtualization](sys-350/lab-4-nested-virtualization.md)
+* [Lab #5: Basic vCenter Automation](sys-350/lab-5-basic-vcenter-automation.md)
 
 ## SYS 265
 
