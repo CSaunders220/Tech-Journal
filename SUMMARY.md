@@ -13,6 +13,7 @@
 * [Lab#3: Advanced Networking and Services](sys-350/lab-3-advanced-networking-and-services.md)
 * [Lab #4: Nested Virtualization](sys-350/lab-4-nested-virtualization.md)
 * [Lab #5: Basic vCenter Automation](sys-350/lab-5-basic-vcenter-automation.md)
+* [Lab #6: Installing HyperV](sys-350/lab-6-installing-hyperv.md)
 
 ## SYS 265
 
