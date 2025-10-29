@@ -14,7 +14,7 @@ For the purpose of cloning, I created a new Ubuntu VM with the following specs:
 * No secure boot
 * Connected to WAN
 
-
+<figure><img src="../.gitbook/assets/image (134).png" alt=""><figcaption></figcaption></figure>
 
 I also ran the following prep [script](https://github.com/gmcyber/480share/blob/master/hyperv-ubuntu-sealer.sh) supplied by the professor and developed by [GMCyber](https://github.com/gmcyber). This script does some basic configurations to prepare an ubuntu VM for cloning on a mass scale.
 
