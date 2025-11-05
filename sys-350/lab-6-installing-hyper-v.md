@@ -58,7 +58,7 @@ Lastly, for the installation, I selected restart if needed and then begun the in
 
 After the installation completed and the computer had restarted, upon opening server manager again the left hand menu bar now had the option to manage and observe the Hyper-V service on the local machine.&#x20;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 I also took one last moment to ise sconfig to make sure that my windows updates were disabled, that my hostname was accrate, and that the remote desktop protocol was enabled and allowed.
 

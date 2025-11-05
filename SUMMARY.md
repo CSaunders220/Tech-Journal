@@ -15,6 +15,7 @@
 * [Lab #5: Basic vCenter Automation](sys-350/lab-5-basic-vcenter-automation.md)
 * [Lab #6: Installing Hyper-V](sys-350/lab-6-installing-hyper-v.md)
 * [Lab #7: Hyper-V Automation](sys-350/lab-7-hyper-v-automation.md)
+* [Lab #7 Edit Temp](sys-350/lab-7-edit-temp.md)
 
 ## SYS 265
 
