@@ -166,7 +166,7 @@ StopVM:
 
 <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
-```
+```powershell
 #Take an inputted VM name and stop the VM in Hyper-V
 #System must have the Hyper-V management module installed
 
