@@ -4,26 +4,42 @@
 
 
 
-## Installing Chrome Remote Desktop
+## Installing OS
 
-Before I begin with the install of OpenStack, the first part of the lab is to install Chrome and Chrome Remote Desktop onto the systems. This is rather simple and can be done with a few short commands and interactions with the CRD webpage.&#x20;
+For this lab and for open stack, a specific version of Ubuntu is needed for the services to properly work. This being said, the version that will be used for these OpenStack labs will be Ubuntu 24.04.3 (Noble Numbat).&#x20;
 
-Firstly, there needed to be a web browser on the machine and for this I chose Chrome to make things simple with CRD. The following commands were used to install chrome onto my Xubuntu server.
+I installed the OS the same way that I have installed all other OSs onto my system by flashing a flash drive with the ISO using Rufus and then booting to that USB on my Super Micro server and installing the new OS onto the smaller of the two drives. Because I have done this many times I will omit the details here in favor of saving space and time for the new services covered in the lab.&#x20;
+
+## Installing XFCE and XRDP
+
+For the desktop environment and for the XRDP service, I chose to use the XFCE environment for my server. XRDP and XFCE was installed onto my Linux system using the following commands.
 
 ```
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb
+sudo apt update && sudo apt upgrade -y
+sudo apt install xfce4 xfce-goodies -y
+sudo apt install xrdp -y
+sudo systemctl start xrdp
+sudo systemctl enable xrdp
+sudo systemctl set-default graphical.target
+echo xfce4-session > ~/.xsession
+sudo apt install ufw
+sudo ufw allow 33899/tcp
+sudo ufw reload
+sudo adduser xrdp ssl-cert
+sudo reboot
 ```
 
-Now that Chrome existed on my host, I was able to open chrome, navigate to the CRD webpage, and set up my system using the SSH method for installation. To do this, I downloaded the debian package from the CRD page, and then ran the provided command to set up chrome remote desktop. After doing so, the host was visible in my CRD home page.
+After rebooting, the XFCE desktop environment was present on my Ubuntu session and I was able to access the desktop environment using my Windows RDP service.
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 1
 
-The following screenshot is me accessing my new Xubuntu server from the CRD viewer in my browser.&#x20;
+The following screenshots demonstrate my ability to use Windows RDP service to access my server via IP and shows the XFCE desktop after using XRDP to log into my server.
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-## Installing OpenStack
+## Installing Open Stack
 
