@@ -43,3 +43,10 @@ The following screenshots demonstrate my ability to use Windows RDP service to a
 
 ## Installing Open Stack
 
+Installing the packages for openstack is probably the easiest part since it uses the snap package manager to do this. The following command was used to install the packages onto my XUbuntu Server:
+
+```
+sudo snap install openstack
+```
+
+Now that the packages were installed, the system needed to be prepped to be an openstack node using sunbeam, one of the tools and features installed with openstack. This tool basically prepares the system for the operation of openstack
