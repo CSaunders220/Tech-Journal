@@ -17,6 +17,7 @@
 * [Lab #7: Hyper-V Automation](sys-350/lab-7-hyper-v-automation.md)
 * [Lab #8: Advanced Hyper-V Automation](sys-350/lab-8-advanced-hyper-v-automation.md)
 * [Lab #9: Installing OpenStack](sys-350/lab-9-installing-openstack.md)
+* [Lab #10: Decommissioning Server](sys-350/lab-10-decommissioning-server.md)
 
 ## SYS 265
 
