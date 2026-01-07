@@ -2,9 +2,13 @@
 
 * [Tech Journal Home Page](README.md)
 
-## SYS 320
+## NET-330
 
-* [Page 2](sys-320/page-2.md)
+* [Page 2](net-330/page-2.md)
+
+## SEC-350
+
+* [Page 1](sec-350/page-1.md)
 
 ## SYS 350
 
@@ -41,7 +45,3 @@
 * [Lab #6: File Servers](sys-255/lab-6-file-servers.md)
 * [Lab #7: Apache and Web Servers](sys-255/lab-7-apache-and-web-servers.md)
 * [Assignment: Securing SSH](sys-255/assignment-securing-ssh.md)
-
-## FOR 120
-
-* [Lab #1: Creating VHDs](for-120/lab-1-creating-vhds.md)
