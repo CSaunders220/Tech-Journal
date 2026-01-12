@@ -10,6 +10,10 @@
 
 * [Page 1](sec-350/page-1.md)
 
+## Rust Personal Notes
+
+* [Day #1: 1/12/26](rust-personal-notes/day-1-1-12-26.md)
+
 ## SYS 350
 
 * [Lab #1: VMWare ESXi Installation](sys-350/lab-1-vmware-esxi-installation.md)
