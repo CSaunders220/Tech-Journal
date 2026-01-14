@@ -2,6 +2,10 @@
 
 ```
 configure
+set system host-name fw01-chris
+set interface ethernet eth0 description "SEC-350-WAN"
+set interface ethernet eth1 description "SAUNDERS-LAN"
+set interface ethernet eth2 description "SAUNDERS-DMZ"
 set interface ethernet eth0 name "WAN"
 set interface ethernet eth1 name "LAN"
 set interface ethernet eth2 name "DMZ"
@@ -25,4 +29,6 @@ set nat source rule 30 outbound interface eth1
 set nat source rule 30 address 172.16.50.0
 set nat source rule 30 translation assress masquerade
 set nat source rule 30 description 'DMZ to LAN'
+set service dns forwarding listen-address 172.16.50.2
+set service dns forwarding allow-from 172.16.50.0/24
 ```
