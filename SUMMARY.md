@@ -8,7 +8,7 @@
 
 ## SEC-350
 
-* [Page 1](sec-350/page-1.md)
+* [Lab #1: Environment Setup](sec-350/lab-1-environment-setup.md)
 
 ## Rust Personal Notes
 
