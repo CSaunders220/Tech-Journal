@@ -25,7 +25,4 @@ set nat source rule 30 outbound interface eth1
 set nat source rule 30 address 172.16.50.0
 set nat source rule 30 translation assress masquerade
 set nat source rule 30 description 'DMZ to LAN'
-set firewall group interface-group WAN interface eth0
-set firewall group interface-group LAN interface eth1
-set firewall group interface-group DMZ interface eth2
 ```
