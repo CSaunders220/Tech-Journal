@@ -109,3 +109,24 @@ The following screenshot shows the results of my 'ip a' command on my log01-chri
 
 ## Configuring HTTP Service
 
+Next, circling back to the web01 VM, I now moved to install httpd and configure the local firewall to enable ports 80 and 443 for web traffic. The following commands were used to do so.
+
+```
+sudo yum install httpd
+sudo systemctl enable httpd
+sudo systemctl start httpd
+sudo firewall-cmd --zone=public --permanent --add-port=80/tcp
+sudo firewall-cmd --zone=public --permanent --add-port=443/tcp
+sudo firewall-cmd --reload
+```
+
+In order to test this new firewall and the ability to reach the http test web page from road warrior, I had to route in the XUbuntu networking configurations from the WAN to the DMZ. To do this, I navigated to the Ubuntu network connections GUI > IPv4 > Routes, and added a route to the DMZ network ID with subnet mask (172.16.50.0/29) that routes to my firewall WAN interface (10.0.17.126).
+
+## Deliverable 6
+
+The following screenshot shows my connection from my Firefox browser via the ID address of my web server with the system's hostname and user as well.&#x20;
+
+<figure><img src="../.gitbook/assets/image (162).png" alt=""><figcaption></figcaption></figure>
+
+## Configuring rsyslog Service
+
