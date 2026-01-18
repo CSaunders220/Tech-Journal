@@ -16,7 +16,7 @@ The software looks similar to the screenshot
 
 &#x20;below where in to top right you can select the drive from ones available on the sustem (including the USB used ot boot into the image) and then you can see what partitions and what formats exist for the storage.&#x20;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 To remove a partition, select the partition from the list below the drive visualizer and then click the red X button to delete. Once all changes are made, press the green check mark to confirm changes.
 
@@ -24,6 +24,6 @@ To remove a partition, select the partition from the list below the drive visual
 
 The following screenshots show both drives on my server which are completely unallocated.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
