@@ -18,17 +18,17 @@ In this case, I was installing the bootable files via USB drive so we started by
 
 Once the core services and tools were installed, it came time to select a disk for the install of the boot partition. Below I have a screenshot showing the options for the selection of which disk to install onto. In this case, I selected the 500 GB internal drive and left the TB drive for the datastore that will be used later.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 After selecting which drive to partition and format for install, I set a root password for the root account of the new ESXi.&#x20;
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once all configurations had been made, the installation was ready to start as shown below. After a chunk of time, the server was ready to reboot after removing the USB from the server.
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Finally, once all of the steps for the initial install for the ESXI onto the server blade had been completed it prompted for a confirmation of actions and finally started a reboot of the system to proceed with the installation as seen above.&#x20;
 
@@ -36,7 +36,7 @@ Finally, once all of the steps for the initial install for the ESXI onto the ser
 
 Once the install of the ESXi image had completed I first removed the USB installation media from the physical server blade. Then, I began the post install configrations starting with the networking.&#x20;
 
-<figure><img src="../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 First, I selected the network adapter that I wanted to use as the default outbound network connection for the server itself, this will later functionally become the "VM Network" and is the direct link to the Freeman lab and cyber.local network.&#x20;
 

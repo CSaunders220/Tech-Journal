@@ -68,25 +68,25 @@ Now that the Datacenter is created, the ESXi host that is running my other exist
 
 I then added the hostname of the target server that I wanted to add to the vCenter as seen below.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 I then provided login information for my ESXi host.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Lastly, I reviewed the information that vCenter collected from the host and then added the host to vCenter.
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Since we are using the free evaluation editions, I skipped the licensing part, I left it in the one and only datacenter I have, and I disabled lockdown mode. Once added, it appeared in my overall view as seen below.
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Creating the ESXi Hosts from an OVA
 
 Tos tart, I right clicked the datacenter in vCenter and selected to deploy a VM from an OVF Template as seen below.
 
-<figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 I then selected the OVF template that I had previously downloaded and uploaded it as a local file to the vCenter from my management machine.&#x20;
 
@@ -128,23 +128,23 @@ Lastly for this section, I edited the vSwitch settings for my networking so that
 
 In order to create the templates and have them deploy properly, I needed to install DHCP onto my environment in a manner of my choice and I chose to go through my AD. I went through the add roles and features menu and selected the DHCP server install as seen below.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 I also specified the user that was permitting the install of the DHCP services onto the AD.
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 I then quickly configured a scope that does not conflict with any IPs currently statically set in the environment and set a decent enough range for IPs.&#x20;
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Creating and Deploying VM Templates
 
 To create a templateable VM, I started with using an ISO from my datastore and I chose to go with Xubuntu. I set the VM configurations as such:
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 I set the network to be the SYS-350 LAN and also connected the datastore 2 ISO folder file for the Xubuntu ISO that I previously had in that location.&#x20;
 
@@ -156,7 +156,7 @@ After making the necissary OS configurations, I went back to the vCenter and rig
 
 To deploy, I went to the datacenter, selected new VM, and then selected deploy from template as seen below.
 
-<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 I chose the template from the datacenter saved location.
 
