@@ -4,7 +4,8 @@
 
 ## NET-330
 
-* [Page 2](net-330/page-2.md)
+* [Week  #1: Basic Routing and Intro to Hardware](net-330/week-1-basic-routing-and-intro-to-hardware.md)
+* [Week #2: Variable Length Subnetting](net-330/week-2-variable-length-subnetting.md)
 
 ## SEC-350
 
