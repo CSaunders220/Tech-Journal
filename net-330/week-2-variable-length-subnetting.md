@@ -51,5 +51,47 @@ The following screenshot is the VLAN port tagging process with commands for the 
 
 Once all switches were tagged and configured properly, I assigned IP address to the hosts below the switches as appropriate based on the IP addressing and subnet table above.&#x20;
 
-### Issues
+### VLAN Port Trunking on Cisco Hardware
+
+Trunking on a Cisco switch using the command line is rather simple, the following commands can be used to set a port to trunk mode and then assign it a VLAN to trunk (or multiple if the command is repeated).
+
+```
+configure terminal
+interface FastEthernet0/1
+switchport mode trunk
+switchport trunk allowed vlan add 100
+exit
+copy running-config startup-config
+```
+
+After running this, the designated port will not be set to trunk mode, to set a port to access mode, the following commands can be used instead.
+
+```
+configure terminal
+interface FastEthernet0/1
+switchport mode access
+switchport access vlan 100
+exit
+copy running-config startup-config
+```
+
+### Routing on Cisco Multilayer Hardware
+
+The packet tracer lab used multilayer switches for this use case and in order to get them to route properly between VLANs there needed to be some configurations made in order for the routing table to be populated. The following code can be used to add a single VLAN to the routing table and was repeated for all VLANs.&#x20;
+
+```
+configure terminal
+ip routing
+interface vlan 100
+ip address 10.20.10.1 255.255.255.0
+no shutdown
+```
+
+Once this was completed for all VLANs and the trunk ports on the core switches in the environment were completed the routing worked between different VLANs across different switches within the whole environment.&#x20;
+
+## Issues
+
+One massive issue encountered that too the longest time to troubleshoot was the fact that when configuring routing on the core switches for the environment, it is imperative that you add the final "no shutdown" command in order for the routing to work. Otherwise, there will be no routing at all whatsoever between your VLANs on this particular switch.&#x20;
+
+Another issue that I had encountered during this lab was the fact that it is best practice going forward to cable things after assigning and configuring switches and services. I did not do this and ended up deleting and redoing the cabling multiple times across the lab and if it were not packet tracer this process would have been extremely tedious.&#x20;
 
