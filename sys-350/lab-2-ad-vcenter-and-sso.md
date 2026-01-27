@@ -14,7 +14,7 @@ I started by creating a new VM for the windows server installation. In this case
 
 I started the Windows Server installation, chose the language for the installation, and then selected the type of windows server installation as seen below. For this lab, I had the option to select the windows server core installation but with the uncertainty of what is down the pipeline I opted to use the desktop experience installation.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once selected, I chose a drive and created a new partition scheme for the fresh windows server install. This was automatic and I opted to have it auto partition the drive space for the install.&#x20;
 
@@ -159,7 +159,7 @@ Finally, I logged out and logged back into my machine as my administrator accoun
 
 Because my VM window was being cut off and you could not see the user that was currently logged in the vCenter home pace, I have attached below a screenshot of the same webpage but of the change password screen and highlighted the user that vCenter was attempting to change the password of, aka my domain admin account.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Reflection
 

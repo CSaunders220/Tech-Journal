@@ -68,7 +68,7 @@ Now that the Datacenter is created, the ESXi host that is running my other exist
 
 I then added the hostname of the target server that I wanted to add to the vCenter as seen below.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 I then provided login information for my ESXi host.
 
@@ -144,7 +144,7 @@ To create a templateable VM, I started with using an ISO from my datastore and I
 
 <figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 I set the network to be the SYS-350 LAN and also connected the datastore 2 ISO folder file for the Xubuntu ISO that I previously had in that location.&#x20;
 

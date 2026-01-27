@@ -62,7 +62,7 @@ exit
 
 Once these steps were completed my interfaces list looked as it does in the screenshot below with all three interfaces showing their proper IP addresses, netmasks, MAC addresses, and names set in the description box.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 2
 
@@ -166,7 +166,7 @@ This line, when broken down, signifies that the syslog facility is user, the pri
 
 With all that in place, I restarted the service and then used the logger -t test command to send a test message from my web01 VM to the log01 VM and this was captured in the messages file of log01 as seen in the deliverable below.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 8
 

@@ -10,6 +10,7 @@
 ## SEC-350
 
 * [Lab #1: Environment Setup](sec-350/lab-1-environment-setup.md)
+* [Lab #2: Time Zones and Logging](sec-350/lab-2-time-zones-and-logging.md)
 
 ## Rust Personal Notes
 
