@@ -46,11 +46,56 @@ I started making this file by using wget to scrape the configurations made [here
 
 Once this file existed in the rsyslog.d directory and the configurations were changed from last week to be recommended out, I restarted the service to test the new logging format.&#x20;
 
-INCREDIBLY IMPORTANT: Not mentioned in the lab, however, it is important to uncomment out the last line of the rsyslog configuration file that mentions the forwarding to target host on the client machines that are being forwarded from. This will target an IP and port for the logs to be sent to and otherwise it will not work.&#x20;
-
 ## Deliverable 5
 
 The following screenshot shows me navigating to the new directory (/var/log/remote-syslog/web01-chris/) and reading the testing log from the remote host that I created using the logger command on web01 and the resulting log in the newly created file.&#x20;
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
+## Forwarding Auth Logs from Web01 to Log01
+
+Next, once I was able to format the logs properly and transfer them between the machines I was tasked with forwarding the authentication logs between web and log. For this, the following one line of code was added the web01's configuration file.
+
+```
+authpriv.* @@172.16.50.5
+```
+
+## Deliverable 6
+
+The screenshot below shows the ssh logs on log01 through the ssh window in mgmt01-chris. This log was transfered from web01 and onto my log01 box via the rsyslog configurations made in the previous deliverable.&#x20;
+
+<figure><img src="../.gitbook/assets/image (164).png" alt=""><figcaption></figcaption></figure>
+
+## Logging Auth Events on Fw01
+
+Now that web had been added to the logging circle, it was time to add fw01-chris to this. This is a VyOS machine which is build on debian linux so the process was relatively similar at the end of the day.
+
+In order to get vyos to sent syslog notifications to log 01, the following set of commands were used to configure this service.
+
+```
+configure
+set system syslog remote 172.16.50.5 facility authpriv level info
+commit
+save
+```
+
+As a side note, I had already done this by the time this lab was around but to change a password for a user on vyos, the following command can be used.
+
+```
+configure
+set system login user <username> authentication plaintext-password <new_password>
+commit
+save
+```
+
+## Deliverable 7
+
+The following screenshot illustrates the tree format of the remote-syslog directory containing now my web01 and fw01 subdirectories as well as the failed logs from when I had failed to log into my vyos firewall VM.&#x20;
+
+<figure><img src="../.gitbook/assets/image (165).png" alt=""><figcaption></figcaption></figure>
+
+## Deliverable 8
+
+The following image is the updated version of my network diagram for this environment. This now contains the mgmt01 box on the LAN network segment as well as all of the new services.
+
+<figure><img src="../.gitbook/assets/image (166).png" alt=""><figcaption></figcaption></figure>
