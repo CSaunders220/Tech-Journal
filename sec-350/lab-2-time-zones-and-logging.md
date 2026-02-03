@@ -8,7 +8,7 @@ To begin this lab, on all of the current systems but for this first step more sp
 
 The screenshot below shows the rw01 VM and the rsyslog in the proper time format. The green box shows the updated format as well as the old logs pre update and the red box shows the first test with the outdated log time format on rw01.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Web01 and Log01 Setup
 
@@ -18,13 +18,13 @@ After doing this on rw01, I did the exact same thing on log01 and web01. The del
 
 The screenshot below shows the before and after changes to the rsyslog service on web01. The green box shows the correct updated format and the red box highlights the logs from before editing the configurations.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 3
 
 The screenshot below shows the changes after editing the configurations to the rsyslog service on log01.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Setting Up Mgmt01
 
@@ -36,7 +36,7 @@ Let it be known that I will never intend to use CRD in any of my connections sin
 
 The screenshot below shows my chrome remote desktop session into my mgmt VM which is in an ssh session to my log01 VM.&#x20;
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Log01 Reformatting
 
@@ -50,7 +50,7 @@ Once this file existed in the rsyslog.d directory and the configurations were ch
 
 The following screenshot shows me navigating to the new directory (/var/log/remote-syslog/web01-chris/) and reading the testing log from the remote host that I created using the logger command on web01 and the resulting log in the newly created file.&#x20;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 ## Forwarding Auth Logs from Web01 to Log01
 
