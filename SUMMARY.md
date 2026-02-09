@@ -12,6 +12,7 @@
 * [Lab #1: Environment Setup](sec-350/lab-1-environment-setup.md)
 * [Lab #2: Time Zones and Logging](sec-350/lab-2-time-zones-and-logging.md)
 * [Lab #3: Network Segmentation](sec-350/lab-3-network-segmentation.md)
+* [Lab #4.1: Wazuh](sec-350/lab-4.1-wazuh.md)
 
 ## Rust Personal Notes
 
