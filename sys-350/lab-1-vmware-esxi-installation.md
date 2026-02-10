@@ -14,21 +14,21 @@ This lab will cover a broad range of topics including but not limited to the fol
 
 In this case, I was installing the bootable files via USB drive so we started by flashing the ISO to a USB via Rufus. Once that was completed and the networking on the physical server was completed, I plugged in the USB into the server blade and restarted the server leading to the automatic start of the install. Once completed, the boot installation started as shown by the screenshot below:
 
-<figure><img src="../.gitbook/assets/image (7) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once the core services and tools were installed, it came time to select a disk for the install of the boot partition. Below I have a screenshot showing the options for the selection of which disk to install onto. In this case, I selected the 500 GB internal drive and left the TB drive for the datastore that will be used later.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 After selecting which drive to partition and format for install, I set a root password for the root account of the new ESXi.&#x20;
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once all configurations had been made, the installation was ready to start as shown below. After a chunk of time, the server was ready to reboot after removing the USB from the server.
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Finally, once all of the steps for the initial install for the ESXI onto the server blade had been completed it prompted for a confirmation of actions and finally started a reboot of the system to proceed with the installation as seen above.&#x20;
 
@@ -36,23 +36,23 @@ Finally, once all of the steps for the initial install for the ESXI onto the ser
 
 Once the install of the ESXi image had completed I first removed the USB installation media from the physical server blade. Then, I began the post install configrations starting with the networking.&#x20;
 
-<figure><img src="../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 First, I selected the network adapter that I wanted to use as the default outbound network connection for the server itself, this will later functionally become the "VM Network" and is the direct link to the Freeman lab and cyber.local network.&#x20;
 
-<figure><img src="../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once that was selected, I chose to edit the IP settings for the machine and filled in the settings as seen above. The IP of the machine is the assigned HOST network assignment, not the IPMI interface network assignment, and the default gateway was simply the Freeman lab default gateway IP.&#x20;
 
-<figure><img src="../.gitbook/assets/image (7) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Next, I set the defauly DNS configurations to point towards the cyber.local DNS servers, one as a primary and the other as the secondary. I also changed the hostname of the machine at this stage to the assigned superX number, in this case my server is super11.
 
-<figure><img src="../.gitbook/assets/image (8) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Lastly, I changed the default domain to be cyber.local to assist with the hostname resolution later down the line and have the default be more easily accessible.&#x20;
 
-<figure><img src="../.gitbook/assets/image (9) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once completed, I accepted the network configurations, allowed it to finalize, and then accessed my ESXi host from my browser via IP as seen in the screenshot above.&#x20;
 
