@@ -39,7 +39,7 @@ set firewall zone DMZ from WAN firewall name WAN-to-DMZ
 
 Once these zones were applied the firewall was set into effect. To test this, I used my rw01 VM which is connected to the WAN to attempt to reach my web server which is located on the DMZ. The screenshot below is the resulting ping showing that it can no longer reach my web01 VM on the DMZ.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 1
 
@@ -57,7 +57,7 @@ Breaking the output down, the first field is the time stamp with date and time t
 * The type and code responses of said protocol
 * And the sequence number which will help with other types of packets.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Allowing Ports and Services
 
@@ -85,7 +85,7 @@ set firewall ipv4 name DMZ-to-WAN rule 1 state established
 
 Once these commands were issued and saved, the firewall rule listing for the DMZ to WAN firewall zone looked like the screenshot below where the new rule is present.&#x20;
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 2
 
@@ -111,3 +111,39 @@ Because of the default ruleset being to drop packets, my Wazuh server cannot com
 
 ## Allowing Wazuh Through Firewalls
 
+Now that all traffic is blocked through the firewalls, similarly to web01, I have to allow the traffic for Wazuh through my DMZ to my LAN and later down the line through my MGMT network once I get to the fw-mgmt VM.&#x20;
+
+Since Wazuh has multiple ports that it uses for its controls I opted to establish a port group for the firewall rule that will have both port 1514 and 1515 in its definition.&#x20;
+
+The syntax for adding this firewall rule with a port group can be seen below.
+
+```
+set firewall group port-group WAZUH port '1514'
+set firewall group port-group WAZUH port '1515'
+
+set firewall ipv4 name DMZ-to-LAN rule 10 action accept
+set firewall ipv4 name DMZ-to-LAN rule 10 description "Wazuh agent communications wiht server"
+set firewall ipv4 name DMZ-to-LAN rule 10 destination port group WAZUH
+set firewall ipv4 name DMZ-to-LAN rule 10 destination address 172.16.200.10
+set firewall ipv4 name DMZ-to-LAN rule 10 protocol tcp
+```
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Now that wazuh traffic was allowed out, it is also important to allow established connections to allow traffic in. The following commands and configurations were made to allow this change.
+
+```
+set firewall ipv4 name LAN-to-DMZ rule 1 action accept
+set firewall ipv4 name LAN-to-DMZ rule 1 description 'Allow established'
+set firewall ipv4 name LAN-to-DMZ rule 1 state established
+```
+
+## Deliverable 4
+
+The following screenshot is of my show firewall rule command showing that rule 1 has been created from LAN to DMZ to allow established connections.&#x20;
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+## Allowing LAN Traffic
+
+Now that security based controls are in place, it is pertinent that the LAN employees who are on this network segment are allowed to browse the internet and make connections to the rest of the internet beyond the internal network.&#x20;

@@ -14,11 +14,11 @@ I started by creating a new VM for the windows server installation. In this case
 
 I started the Windows Server installation, chose the language for the installation, and then selected the type of windows server installation as seen below. For this lab, I had the option to select the windows server core installation but with the uncertainty of what is down the pipeline I opted to use the desktop experience installation.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once selected, I chose a drive and created a new partition scheme for the fresh windows server install. This was automatic and I opted to have it auto partition the drive space for the install.&#x20;
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once completed, the drive partitions were completed as seen below.
 
@@ -145,7 +145,7 @@ Above is the home page for my vCenter instance with the version number, build, a
 
 For the SSO integration, I started by opening the administration menu and joining the vCenter to my domain and went under SSO and then to configuration. Here I added my domain as an identity source by clicking add, giving it my domain and a domain admin account credentials, and then restarting the server. Once completed, I was able to see my domain in the sources as seen below.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now that my domain was an identity source for SSO, I added the Domain Admin and Enterprise Admin groups to the vCenter administrators built in group as seen below.
 
@@ -159,7 +159,7 @@ Finally, I logged out and logged back into my machine as my administrator accoun
 
 Because my VM window was being cut off and you could not see the user that was currently logged in the vCenter home pace, I have attached below a screenshot of the same webpage but of the change password screen and highlighted the user that vCenter was attempting to change the password of, aka my domain admin account.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Reflection
 
