@@ -147,3 +147,131 @@ The following screenshot is of my show firewall rule command showing that rule 1
 ## Allowing LAN Traffic
 
 Now that security based controls are in place, it is pertinent that the LAN employees who are on this network segment are allowed to browse the internet and make connections to the rest of the internet beyond the internal network.&#x20;
+
+To complete this I added the following zones, rules, and paths to the VyOS firewall from LAN to WAN.&#x20;
+
+```
+set firewall ipv4 name WAN-to-LAN default-action drop
+set firewall ipv4 name LAN-to-WAN default-action drop
+set firewall ipv4 name WAN-to-LAN default-log 
+set firewall ipv4 name LAN-to-WAN default-log
+set firewall ipv4 name WAN-to-LAN rule 1 action accept
+set firewall ipv4 name WAN-to-LAN rule 1 state extablished
+set firewall ipv4 name LAN-to-WAN rule 1 action accept
+```
+
+Now that these configurations were made the users on LAN can access the internet through the WAN interface.
+
+## Deliverable 5
+
+The following screenshot proves that I am able to access the internet beyond my network on the workstation after configuring the firewall rules on the fw01-chris.
+
+<figure><img src="../.gitbook/assets/image (171).png" alt=""><figcaption></figcaption></figure>
+
+## Allowing LAN to DMZ
+
+The LAN for the most part shouldn't really need into the DMZ except for port 80 for the web server for the entire LAN and port 22 for mgmt01 so that it can SSH into the web01 host and make configuration changes. The following commands were added to the LAN to DMZ firewall for this part of the lab.
+
+```
+set firewall ipv4 name LAN-to-DMZ rule 10 action accept
+set firewall ipv4 name LAN-to-DMZ rule 10 destination port 80
+set firewall ipv4 name LAN-to-DMZ rule 10 protocol tcp
+set firewall ipv4 name LAN-to-DMZ rule 20 action accept
+set firewall ipv4 name LAN-to-DMZ rule 20 destination port 22
+set firewall ipv4 name LAN-to-DMZ rule 20 source address 172.16.150.10
+set firewall ipv4 name LAN-to-DMZ rule 20 protocol tcp
+```
+
+And of course if we allow it one way we have to allow established connections back out the firewall from the DMZ side of things.
+
+```
+set firewall ipv4 name DMZ-to-LAN rule 1 action accept
+set firewall ipv4 name DMZ-to-LAN rule 1 state established
+```
+
+## Deliverable 6
+
+Now that these rules were implemented in the previous step my workstation is allowed to browse the webpage hosted on web01 by IP in the browser as seen below.
+
+<figure><img src="../.gitbook/assets/image (172).png" alt=""><figcaption></figcaption></figure>
+
+## Deliverable 7
+
+Similarly to the last deliverable this is also to test the rules that I had just made using my firewall to allow ssh over port 22 from specifically mgmt01 to my DMZ. The screenshot below shows me attempting to log in as testwazuhafterfirewall which does not exist on my web host and Wazuh capturing this log and showing it in the web interface.
+
+<figure><img src="../.gitbook/assets/image (173).png" alt=""><figcaption></figcaption></figure>
+
+## Configuring fw-mgmt
+
+This part of the lab was done in one big chunk so the configurations commands below are all of the commands that I have used on fw-mgmt in order to properly configure the firewall rules on the two interfaces that this VM has.&#x20;
+
+```
+set firewall zone LAN
+set firewall zone MGMT
+set firewall zone LAN member interface eth0
+set firewall zone MGMT member interface eth1
+set firewall ipv4 name LAN-to-MGMT default-action drop
+set firewall ipv4 name MGMT-to-LAN default-action drop
+set firewall ipv4 name LAN-to-MGMT default-log 
+set firewall ipv4 name MGMT-to-LAN default-log
+
+set firewall ipv4 name LAN-to-MGMT rule 10 action accept
+set firewall ipv4 name LAN-to-MGMT rule 10 source port 1515
+set firewall ipv4 name LAN-to-MGMT rule 10 protocol tcp
+set firewall ipv4 name LAN-to-MGMT rule 20 action accept
+set firewall ipv4 name LAN-to-MGMT rule 20 destination port 22,443
+set firewall ipv4 name LAN-to-MGMT rule 20 source address 172.16.150.10
+set firewall ipv4 name LAN-to-MGMT rule 20 destination address 172.16.200.10
+set firewall ipv4 name LAN-to-MGMT rule 20 protocol tcp
+set firewall ipv4 name LAN-to-MGMT rule 1 action accept
+set firewall ipv4 name LAN-to-MGMT rule 1 state established
+set firewall ipv4 name LAN-to-MGMT rule 40 action accept
+set firewall ipv4 name LAN-to-MGMT rule 40 source port 1515
+set firewall ipv4 name LAN-to-MGMT rule 40 protocol udp
+
+set firewall ipv4 name MGMT-to-LAN rule 1 action accept
+set firewall ipv4 name MGMT-to-LAN rule 1 state established
+set firewall ipv4 name MGMT-to-LAN rule 10 action accept
+set firewall ipv4 name MGMT-to-LAN rule 10 destination address 172.16.150.0/24
+set firewall ipv4 name MGMT-to-LAN rule 20 action accept
+set firewall ipv4 name MGMT-to-LAN rule 20 destination address 172.16.50.0/29
+```
+
+Once all of these things were configured, this segment of my network was able to complete a variety of things such as:
+
+* Allows 1514,1515/tcp from LAN to wazuh
+* Allows 443/tcp from mgmt01 on LAN to wazuh
+* Allows 22/tcp from mgmt01 on LAN to wazuh
+* Allows MGMT to initiate any connection to the LAN
+* Allows MGMT to initiate any connection to the DMZ
+* Allows established traffic back through the related firewalls
+
+## Deliverable 8
+
+The screenshot below is taken from my mgmt02 VM which, in order of the boxes from top to bottom of the screenshot, is pinging my other mgmt01 VM on the LAN, being denied access to the internet through the WAN, and being able to invoke a web request for the webpage on my web01 server on the DMZ.
+
+<figure><img src="../.gitbook/assets/image (174).png" alt=""><figcaption></figcaption></figure>
+
+## Deliverable 9
+
+Below is the output of my "show firewall ipv4 zone" on my fw-mgmt VM
+
+<figure><img src="../.gitbook/assets/image (175).png" alt=""><figcaption></figcaption></figure>
+
+## Deliverable 10
+
+Below is the output of my "show firewall name LAN-TO-MGMT" on fw-mgmt
+
+<figure><img src="../.gitbook/assets/image (176).png" alt=""><figcaption></figcaption></figure>
+
+## Deliverable 11
+
+Below is the output of my "show firewall name MGMT-TO-LAN" on fw-mgmt
+
+<figure><img src="../.gitbook/assets/image (177).png" alt=""><figcaption></figcaption></figure>
+
+## Deliverable 12
+
+The following screenshoit is after I had configured the mgmt firewall to allow communication voer port 1514 and 1515 to allow web to communicate with wazuh. The screenshto shows that wazuh can still log the incidents as they happen on web.
+
+<figure><img src="../.gitbook/assets/image (178).png" alt=""><figcaption></figcaption></figure>
