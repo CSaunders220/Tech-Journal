@@ -16,7 +16,7 @@ To prove that I set up the LAN correctly, this is a screenshot from the workstat
 
 Similarly to the last deliverable, this is another to test connections between my LAN and DMZ.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Enabling RIP on VyOS
 
@@ -61,7 +61,7 @@ Once these edits were made to my configuration file I restarted the service and 
 
 The following screenshot illustrates that I can reach google.com from my Wazuh server as well as that I can curl the resources on my DMZ web server.&#x20;
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 5
 

@@ -15,3 +15,37 @@ When a client is attempting to rebind an address, the client will only send the 
 
 It is important to note that renewal begins 50% of the way through the lease and rebinding happens at 87.5% of the lease time.&#x20;
 
+DHCP traffic uses two separate ports to communicate between client and server. The first is UDP 67 for the server listening for broadcasts and the second is UDP 68 for client listening for communication from the DHCP server.
+
+## Capturing DHCP Packets
+
+DHCP packets will often be in a short burst of four packets in a row, one of each packet type as described above. The following screenshot shows a single FHCP interaction between client and server where the IP address 192.168.3.1 is the client and 192.168.1.10 is the DHCP server.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+The following graphic also shows the DHCP packet header and the components that make up these packets.&#x20;
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+## Setting Up a DHCP Server With Cisco Routers
+
+Setting up a DHCP server itself is easy, both as a concept and within packet tracer. The general steps for getting a DHCP server running are as follows:
+
+* Setting up a pool starting IP
+* Setting up a pool stop IP
+* Telling it what interface to serve over
+* Defining the pool's default gateway
+* Giving it a DNS address for the pool
+
+Once these are complete and the service is on there is one last step for allowing the DHCP server to properly work on a subnet with the cisco routers. This would be to define a helper address.
+
+A helper address basically tells the router that there is a service over this IP address that the different subnets may be requesting for something like DHCP. To set a helper address in the cisco CLI I used the following commands:
+
+```
+Router# configure terminal
+Router(config)# interface FastEthernet 0/X
+Router(config-if)# ip helper-address 192.168.3.10
+Router(config-if)# exit
+```
+
+It is important to note that for each interface / VLAN that you wish to be able to access the DHCP server you have to define the helper address.&#x20;

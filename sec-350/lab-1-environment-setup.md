@@ -62,13 +62,13 @@ exit
 
 Once these steps were completed my interfaces list looked as it does in the screenshot below with all three interfaces showing their proper IP addresses, netmasks, MAC addresses, and names set in the description box.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 2
 
 The following screenshot shows my VyOS firewall pinging google.com from the command line interface. The pings are successful meaning that the NAT and all of the DNS forwarding settings as well as the IP addressing is set correctly.&#x20;
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Configuring Web Server
 
@@ -150,7 +150,7 @@ sudo systemctl start rsyslog
 
 Once this was configured on my log01 VM, I also had to configure the configuration file for the rsyslog service and then restart it. The screenshot below illustrates the changes that I made to the configuration file by uncommenting out the lines.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Web01 Configurations
 
@@ -166,7 +166,7 @@ This line, when broken down, signifies that the syslog facility is user, the pri
 
 With all that in place, I restarted the service and then used the logger -t test command to send a test message from my web01 VM to the log01 VM and this was captured in the messages file of log01 as seen in the deliverable below.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 8
 
