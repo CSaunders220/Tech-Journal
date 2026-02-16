@@ -6,6 +6,7 @@
 
 * [Week  #1: Basic Routing and Intro to Hardware](net-330/week-1-basic-routing-and-intro-to-hardware.md)
 * [Week #2: Variable Length Subnetting](net-330/week-2-variable-length-subnetting.md)
+* [Week #3: DHCP](net-330/week-3-dhcp.md)
 * [Week #5: Small Enterprise Class Lab](net-330/week-5-small-enterprise-class-lab.md)
 
 ## SEC-350
