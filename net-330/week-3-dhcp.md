@@ -21,11 +21,11 @@ DHCP traffic uses two separate ports to communicate between client and server. T
 
 DHCP packets will often be in a short burst of four packets in a row, one of each packet type as described above. The following screenshot shows a single FHCP interaction between client and server where the IP address 192.168.3.1 is the client and 192.168.1.10 is the DHCP server.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 The following graphic also shows the DHCP packet header and the components that make up these packets.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Setting Up a DHCP Server With Cisco Routers
 

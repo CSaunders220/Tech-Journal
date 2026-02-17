@@ -10,13 +10,13 @@ Setup and information regarding the setup of workstation and the initial setup o
 
 To prove that I set up the LAN correctly, this is a screenshot from the workstation VM showing the hostname, the new user, and also the ability to ping champlain.edu showing outbound internet and name resolution.
 
-<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 2
 
 Similarly to the last deliverable, this is another to test connections between my LAN and DMZ.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Enabling RIP on VyOS
 
@@ -31,7 +31,7 @@ set protocols rip network '172.16.200.0/28'
 
 The screenshot below is of my new management box which can not ping the hosts on the DMZ, has a set hostname, and a set named administrator user.&#x20;
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Configuring Wazuh
 
@@ -61,19 +61,19 @@ Once these edits were made to my configuration file I restarted the service and 
 
 The following screenshot illustrates that I can reach google.com from my Wazuh server as well as that I can curl the resources on my DMZ web server.&#x20;
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 5
 
 The following screenshot shows that I am able to ssh from mgmt01 to my wazuh server, and it also shows the first four hops that the wazuh server takes to reach the outside internet through my LAN network, and then out from the WAN to the datacenter network.&#x20;
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 6
 
 The following screenshot is of my web server showing that I am able to ping the management network, more specifically that I can ping my Wazuh server on the management network which will be important later once the services are set up.
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 7
 
@@ -81,13 +81,13 @@ This deliverable is in two parts, the first section is of fw01-chris showing my 
 
 ### fw01-chris
 
-<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### fw-mgmt-chris
 
-<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 8
 

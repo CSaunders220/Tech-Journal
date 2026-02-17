@@ -17,6 +17,7 @@
 * [Lab #3: Network Segmentation](sec-350/lab-3-network-segmentation.md)
 * [Lab #4.1: Wazuh](sec-350/lab-4.1-wazuh.md)
 * [Lab #4.2: Network Firewalls](sec-350/lab-4.2-network-firewalls.md)
+* [Lab #5: ModSecurity with Wazuh](sec-350/lab-5-modsecurity-with-wazuh.md)
 
 ## Rust Personal Notes
 
