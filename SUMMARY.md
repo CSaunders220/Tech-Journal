@@ -9,6 +9,7 @@
 * [Week #3: DHCP](net-330/week-3-dhcp.md)
 * [Week #4: DNS and Physical VLANs](net-330/week-4-dns-and-physical-vlans.md)
 * [Week #5: Small Enterprise Class Lab](net-330/week-5-small-enterprise-class-lab.md)
+* [Week #6: NAT and PAT](net-330/week-6-nat-and-pat.md)
 
 ## SEC-350
 
