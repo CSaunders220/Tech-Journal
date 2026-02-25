@@ -22,7 +22,7 @@ sudo dnf install mod_security mod_security_crs php php-common php-opcache php-cl
 
 The following screenshot is from the httpd error logs showing that ModSecurity was installed onto the service but not yet configured for anything.&#x20;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 ## Configuring ModSecurity
 
@@ -40,7 +40,7 @@ To verify, I went over to my rw01 on the WAN and tested to make sure that I coul
 
 The following screenshot shows me accessing my webpage via curl and via the browser from rw01 after making the changes to ModSecurity. In order from top to bottom in the highlighted zones is the browser accessing my webpage via IP, the terminal accessing the webpage via IP and wget, and the hostname of the current system (rw01).
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Adding a WebShell to Web01
 
@@ -72,19 +72,19 @@ system($_POST['cmd'] . ' 2>&1);
 
 Once added to my webpage in the /var/www/html path, I restarted my service and opened the page from my browser on rw01. The page itself can be seen in the screenshot below.&#x20;
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 3
 
 The screenshot below is of the command that I chose to execute, in my case the "ip a" command, executed and outputted to the web shell. I did have to be explicit with the path for the command as seen in the first highlighted field in the screenshot.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 4
 
 Now that I had a working web shell, I attempted to run the command "car /etc/passwd" in the terminal in an attempt to access material that is traditionally off limits to the average Linux user because it holds sensitive information. The following screenshots show before and after running the command on my web shell.&#x20;
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 

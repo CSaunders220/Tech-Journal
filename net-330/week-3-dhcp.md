@@ -25,7 +25,7 @@ DHCP packets will often be in a short burst of four packets in a row, one of eac
 
 The following graphic also shows the DHCP packet header and the components that make up these packets.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Setting Up a DHCP Server With Cisco Routers
 

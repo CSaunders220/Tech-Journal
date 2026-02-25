@@ -71,7 +71,7 @@ I also allowed port forwarding for port 22 over my WAN interface so that my RW01
 
 ## Deliverable 4
 
-The screenshot below shows the password less authentication via SSH to my jump box from road warrior. The only password prompt is for the ssh key passphrase which I configured but the user itself is passwordless.&#x20;
+The screenshot below shows the password less authentication via SSH to my jump box from road warrior. The only password prompt is for the ssh key passphrase which I configured but the user itself is password less.&#x20;
 
 <figure><img src="../.gitbook/assets/image (200).png" alt=""><figcaption></figcaption></figure>
 
@@ -81,5 +81,25 @@ For the next part it is important to distinguish that I have two separate users 
 
 <figure><img src="../.gitbook/assets/image (201).png" alt=""><figcaption></figcaption></figure>
 
-With this, I was able to pull the wazuh configurations as provided by the wazuh service through the web portal onto mgmt01 and scp it to jump using teh allowed ssh traffic that I verified at the very start of the lab.&#x20;
+With this, I was able to pull the wazuh configurations as provided by the wazuh service through the web portal onto mgmt01 and ssh into my jump-chris VM to input the command.&#x20;
+
+Once inputted and the service was enabled and started, I returned to my dashboard to view my new agent.
+
+## Deliverable 5
+
+The screenshot below shows that I now have two agents and the most recent to be registered is jump-chris from my wazuh dashboard.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+## Reflection / Issues
+
+Along the course of this lab I encountered two primary issues that halted my progress, both of which were more or less silly mistakes. The first issue that I encountered was that I created my key pair for rw01 and jump as rood so naturally when I ran the command as my regular user the keys were not able to be used so it would not allow me to SSH into jump01.&#x20;
+
+The second issue that I encountered was that I simply made a typo in my configuration for Wazuh which set me back a considerable amount but I have discovered how to manually troubleshoot the configurations of the Wazuh agent from the target.&#x20;
+
+## Deliverable 6
+
+The following screenshot is the most up to date network diagram that now shows jump and the new wazuh configurations.&#x20;
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
