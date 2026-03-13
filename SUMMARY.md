@@ -20,6 +20,7 @@
 * [Lab #4.2: Network Firewalls](sec-350/lab-4.2-network-firewalls.md)
 * [Lab #5: ModSecurity with Wazuh](sec-350/lab-5-modsecurity-with-wazuh.md)
 * [Lab #6: Jump Boxes and Port Forwarding](sec-350/lab-6-jump-boxes-and-port-forwarding.md)
+* [Lab #7: Assessment Prep](sec-350/lab-7-assessment-prep.md)
 
 ## Rust Personal Notes
 
