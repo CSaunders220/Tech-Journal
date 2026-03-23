@@ -40,3 +40,28 @@ The following is a screenshot of my SSH session on mgmt01-chris into nginx01-chr
 
 <figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
+## Setting Up a DHCP Server on Ubuntu
+
+To configure my DHCP server on the new DHCP box I used the following commands to install the service, edit the configurations, and start the service.
+
+```
+sudo apt install isc-dhcp-server -y
+sudo nano /etc/default/isc-dhcp-server
+#Set the name of the network interface ex. INTERFACESv4="ens18"
+sudo nano /etc/dhcp/dhcpd.conf
+subnet 172.16.150.0 netmask 255.255.255.0 {
+  range 172.16.150.50 172.16.150.99;
+  option routers 172.16.150.2;
+  option domain-name-servers 172.16.150.2;
+  default-lease-time 600;
+  max-lease-time 7200;
+}
+sudo systemctl restart isc-dhcp-server
+sudo systemctl enable isc-dhcp-server
+```
+
+Once completed, the server began its work and I changed workstation to now retrieve its IP addressing information automatically through DHCP.&#x20;
+
+## Deliverable 6
+
+The following screenshot shows my workstation performing a release, renew, and listing its IP address information after it gets the new lease from the new DHCP server.&#x20;
