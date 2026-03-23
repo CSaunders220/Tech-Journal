@@ -89,7 +89,7 @@ Once inputted and the service was enabled and started, I returned to my dashboar
 
 The screenshot below shows that I now have two agents and the most recent to be registered is jump-chris from my wazuh dashboard.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 ## Reflection / Issues
 
@@ -101,5 +101,5 @@ The second issue that I encountered was that I simply made a typo in my configur
 
 The following screenshot is the most up to date network diagram that now shows jump and the new wazuh configurations.&#x20;
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
