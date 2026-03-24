@@ -39,7 +39,7 @@ set firewall zone DMZ from WAN firewall name WAN-to-DMZ
 
 Once these zones were applied the firewall was set into effect. To test this, I used my rw01 VM which is connected to the WAN to attempt to reach my web server which is located on the DMZ. The screenshot below is the resulting ping showing that it can no longer reach my web01 VM on the DMZ.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 1
 
@@ -57,7 +57,7 @@ Breaking the output down, the first field is the time stamp with date and time t
 * The type and code responses of said protocol
 * And the sequence number which will help with other types of packets.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Allowing Ports and Services
 
@@ -73,7 +73,7 @@ set firewall ipv4 name WAN-to-DMZ rule 10 destination address 172.16.50.3
 set firewall ipv4 name WAN-to-DMZ rule 10 protocol tcp
 ```
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 For the DMZ firewall specifically, the rule I will be establishing will make it so that established connections can move from the DMZ to the WAN. The commands used for this can be found below.
 
@@ -85,13 +85,13 @@ set firewall ipv4 name DMZ-to-WAN rule 1 state established
 
 Once these commands were issued and saved, the firewall rule listing for the DMZ to WAN firewall zone looked like the screenshot below where the new rule is present.&#x20;
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 2
 
 To test this new rule, I created a very basic webpage called welcome.html that will server as the home page for the test. As seen in the screenshot below I can access the webpage from rw01 now that the rule was in place.
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Setting Up Other Firewalls
 
@@ -128,7 +128,7 @@ set firewall ipv4 name DMZ-to-LAN rule 10 destination address 172.16.200.10
 set firewall ipv4 name DMZ-to-LAN rule 10 protocol tcp
 ```
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now that wazuh traffic was allowed out, it is also important to allow established connections to allow traffic in. The following commands and configurations were made to allow this change.
 
@@ -142,7 +142,7 @@ set firewall ipv4 name LAN-to-DMZ rule 1 state established
 
 The following screenshot is of my show firewall rule command showing that rule 1 has been created from LAN to DMZ to allow established connections.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Allowing LAN Traffic
 

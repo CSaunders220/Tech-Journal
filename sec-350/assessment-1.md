@@ -8,7 +8,7 @@ This assessment saw the removal of fw01, rw01, and web01 and instead I received 
 
 The following screenshot shows my new named user, who is in the sudo group, as well as a successful ping to champlain.edu from the new ubuntu system nginx01. This is with an outbound firewall exception that I created on edge to allow the packets in and out temporarily.&#x20;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 ## Merging Configuration Files in VyOS
 
@@ -20,25 +20,25 @@ KEY DETAIL: Make sure to then edit the config.boot file to change the MAC addres
 
 The following screenshot is of my traveler VM showing the current logged user which is my administrator named account, the hostname of the machine, and a successful curl of my webpage (currently the test nginx page) on nginx through the firewall's port forwarded rule after disallowing all traffic from DMZ-to-WAN and WAN-to-DMZ.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 3
 
 The following screenshot is of my Wazuh dashboard where I can see the events for the nginx-chris machine and I have a failed SSH attempt from an invalid user logged in the system security events. The screenshot below shows the event in the lost of events.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 4
 
 The following  screenshot shows a successful SSH attempt from mgmt01-chris to nginx-chris.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 5
 
 The following is a screenshot of my SSH session on mgmt01-chris into nginx01-chris that is attempting to curl champlain.edu as well as the logs on edge01 showing that the firewall is dropping the packets because there should be no outbound internet allowed through DMZ to WAN and beyond.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Setting Up a DHCP Server on Ubuntu
 
@@ -65,3 +65,29 @@ Once completed, the server began its work and I changed workstation to now retri
 ## Deliverable 6
 
 The following screenshot shows my workstation performing a release, renew, and listing its IP address information after it gets the new lease from the new DHCP server.&#x20;
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+## Deliverable 7
+
+The following screenshot is of the security events for my DHCP server in Wazuh showing that I attempted to log in as a user called notreal which didn't exist and failed to authenticate on the server.
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+## Deliverable 8
+
+The following screenshot is of my traveler system that is remotely logging into the jump VM through the IP address of the port forwarded firewall passwordlessly through the generated SSH key for jump from traveler.
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+## Deliverable 9
+
+The following is a screenshot showing my workstation viewing the web page hosted on my nginx VM on the DMZ network.
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+## Deliverable 10
+
+The final deliverable is to show all of the configurations of edge01 in plaintext configuration command form so the following GitHub link is directly to the configurations command list for my firewall which I imported from the original configurations for fw01 and modified.
+
+{% embed url="https://github.com/CSaunders220/Toolkit/blob/Tools/SEC-350/edgeConfigurations.txt" %}

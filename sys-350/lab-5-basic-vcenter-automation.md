@@ -39,7 +39,7 @@ Once that is completed, I navigated to the web comfiguration portal for my firew
 
 Once found, I clicked the install button on the right as seen in the screenshot below.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 After confirming and installing the package, the VMware tools was ready to go for my PFsense VM.&#x20;
 
@@ -74,7 +74,7 @@ I then opened VScode and opened my git directory as seen in the screenshot for d
 
 The screenshot below illustrates that I have VScode installed onto my machine, that I have a new folder in a repo for SYS-350 scripts with a README.md file, and my IP configurations for my MGMT VM.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Python Scripts and Configs
 

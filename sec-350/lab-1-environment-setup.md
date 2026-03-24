@@ -62,13 +62,13 @@ exit
 
 Once these steps were completed my interfaces list looked as it does in the screenshot below with all three interfaces showing their proper IP addresses, netmasks, MAC addresses, and names set in the description box.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 2
 
 The following screenshot shows my VyOS firewall pinging google.com from the command line interface. The pings are successful meaning that the NAT and all of the DNS forwarding settings as well as the IP addressing is set correctly.&#x20;
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Configuring Web Server
 
@@ -82,7 +82,7 @@ First and foremost, I created a chris.saunders user, set the password, added to 
 
 The web server is now configured at the basic level. The following screenshot shows the successful ping to 8.8.8.8 but the failed DNS resolve of google.com because at this time my firewall is not configured for forwarding DNS to the DMZ network.&#x20;
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Setting up DNS Forwarding
 
@@ -100,7 +100,7 @@ set service dns forwarding allow-from 172.16.150.0/24
 
 The following screenshot was taken on web01-chris after configuring the DNS forwarding from my DMZ to the internet and therefore allowing for the google.com ping to resolve and be successful.&#x20;
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Configuring Logging VM
 
@@ -150,7 +150,7 @@ sudo systemctl start rsyslog
 
 Once this was configured on my log01 VM, I also had to configure the configuration file for the rsyslog service and then restart it. The screenshot below illustrates the changes that I made to the configuration file by uncommenting out the lines.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Web01 Configurations
 
@@ -166,13 +166,13 @@ This line, when broken down, signifies that the syslog facility is user, the pri
 
 With all that in place, I restarted the service and then used the logger -t test command to send a test message from my web01 VM to the log01 VM and this was captured in the messages file of log01 as seen in the deliverable below.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 8
 
 The following screenshot, from top to bottom, is my logged into road warrior (rw01), starting an ssh session into web01, and then once in that ssh session starting another ssh session into log01 from web01 in that order.
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 9
 
@@ -186,4 +186,4 @@ The setting up and configuring of the rsyslog service on my log01 VM can be foun
 
 The most up to date network diagram as of this lab can be found in the image below. This includes the WAN, LAN, and DMZ segments of my network and all of the devices that were configured throughout the process of this lab.&#x20;
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
