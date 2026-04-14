@@ -101,5 +101,5 @@ The second issue that I encountered was that I simply made a typo in my configur
 
 The following screenshot is the most up to date network diagram that now shows jump and the new wazuh configurations.&#x20;
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

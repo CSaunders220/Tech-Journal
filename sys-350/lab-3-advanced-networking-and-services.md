@@ -59,7 +59,7 @@ It is important to note that I learned that PFsense managed the firewall rules i
 
 When configured right, I am able to view the web page being hosted on the DMZ network on my management box as seen below.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Video Proof Submission
 

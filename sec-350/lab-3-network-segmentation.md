@@ -16,7 +16,7 @@ To prove that I set up the LAN correctly, this is a screenshot from the workstat
 
 Similarly to the last deliverable, this is another to test connections between my LAN and DMZ.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Enabling RIP on VyOS
 
@@ -61,19 +61,19 @@ Once these edits were made to my configuration file I restarted the service and 
 
 The following screenshot illustrates that I can reach google.com from my Wazuh server as well as that I can curl the resources on my DMZ web server.&#x20;
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 5
 
 The following screenshot shows that I am able to ssh from mgmt01 to my wazuh server, and it also shows the first four hops that the wazuh server takes to reach the outside internet through my LAN network, and then out from the WAN to the datacenter network.&#x20;
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 6
 
 The following screenshot is of my web server showing that I am able to ping the management network, more specifically that I can ping my Wazuh server on the management network which will be important later once the services are set up.
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Deliverable 7
 
@@ -93,4 +93,4 @@ This deliverable is in two parts, the first section is of fw01-chris showing my 
 
 The final deliverable for this lab, is of course the network diagram. The screenshot below shows my up to date network diagram for my network at this stage in the class.&#x20;
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
