@@ -23,6 +23,7 @@
 * [Lab #7: Assessment Prep](sec-350/lab-7-assessment-prep.md)
 * [Assessment #1](sec-350/assessment-1.md)
 * [Lab #10: Windows Logging With Wazuh](sec-350/lab-10-windows-logging-with-wazuh.md)
+* [Lab #11: Zeek](sec-350/lab-11-zeek.md)
 
 ## Rust Personal Notes
 
